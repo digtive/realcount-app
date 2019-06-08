@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="haris.org.bg_iqbal">
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".chart.ChartActivity" />
+        <activity android:name=".chart.PieChart" />
+        <activity android:name=".expandable.RecyclerViewActivity"/>
+        <activity android:name=".baca_inbox.Baca_Inbox" />
+        <activity android:name=".pop_up.PopUpTest"/>
+        <activity android:name=".baca_notifikasi.Baca_Notifikasi" />
+        <activity android:name=".tab_navigation.Navigation_Swipe" />
+        <activity android:name=".core.Ubah_Status" />
+        <activity android:name=".core.SendSms" />
+        <activity android:name=".rci.RCI_Induk"/>
+        <activity android:name=".core.Dashboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".baca_notifikasi.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

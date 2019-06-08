@@ -1,0 +1,65 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Perolehan suara paslon"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:id="@+id/judulUtama"
+            android:onClick="klikJudul"
+            android:layout_height="wrap_content"/>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/pizza_chart"
+            android:layout_width="match_parent"
+            android:layout_margin="30dp"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suara masuk Kecamatan Seresam 70%"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(7273 suara masuk dari 10390 suara)"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rincian suara masuk per TPS"
+            android:textAlignment="center"
+            android:textColor="@color/material_red_300"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
